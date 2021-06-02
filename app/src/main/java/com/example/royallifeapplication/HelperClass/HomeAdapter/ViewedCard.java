@@ -5,6 +5,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -60,6 +61,14 @@ public class ViewedCard extends RecyclerView.Adapter<ViewedCard.FeaturedViewHode
             image = itemView.findViewById(R.id.image_cgv1);
             title = itemView.findViewById(R.id.txt_cgv1);
             desc = itemView.findViewById(R.id.txt_gioithieucgv1);
+
+            itemView.bringToFront();
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Toast.makeText(v.getContext(),"sad",Toast.LENGTH_LONG).show();
+                }
+            });
 
         }
     }

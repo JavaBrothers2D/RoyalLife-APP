@@ -63,6 +63,13 @@ public class FeatureAdpater extends RecyclerView.Adapter<FeatureAdpater.Featured
             title = itemView.findViewById(R.id.txt_cgv);
             desc = itemView.findViewById(R.id.txt_gioithieucgv);
 
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                }
+            });
+
         }
     }
 

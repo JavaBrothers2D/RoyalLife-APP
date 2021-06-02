@@ -30,11 +30,13 @@ public class Profile extends AppCompatActivity {
         username = findViewById(R.id.edtProfileFullname);
         //show data
         showUser();
+
         back = findViewById(R.id.backtoMenu);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(),mmeennuu.class);
+                startActivity(intent);
             }
         });
     }

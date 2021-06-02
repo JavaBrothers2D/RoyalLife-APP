@@ -57,6 +57,13 @@ public class CatgoriersCard extends RecyclerView.Adapter<CatgoriersCard.Featured
 
             image = itemView.findViewById(R.id.image_restaurant);
             title = itemView.findViewById(R.id.text_restaurant);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                }
+            });
         }
     }
 
