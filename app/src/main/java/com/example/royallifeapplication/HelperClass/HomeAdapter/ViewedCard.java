@@ -49,7 +49,7 @@ public class ViewedCard extends RecyclerView.Adapter<ViewedCard.FeaturedViewHode
         return featuredLocations.size();
     }
 
-    public static class FeaturedViewHoder extends RecyclerView.ViewHolder{
+    public class FeaturedViewHoder extends RecyclerView.ViewHolder{
 
         ImageView image;
         TextView title, desc;
@@ -66,7 +66,9 @@ public class ViewedCard extends RecyclerView.Adapter<ViewedCard.FeaturedViewHode
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Toast.makeText(v.getContext(),"sad",Toast.LENGTH_LONG).show();
+                    int itemPosition=getAdapterPosition();
+                    FeaturedHelpersClass item = featuredLocations.get(itemPosition);
+                    Toast.makeText(v.getContext(),item.description,Toast.LENGTH_LONG).show();
                 }
             });
 

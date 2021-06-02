@@ -5,6 +5,7 @@ import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.WindowManager;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -34,6 +35,7 @@ public class mmeennuu extends AppCompatActivity implements NavigationView.OnNavi
     FeatureAdpater adapter;
     RecyclerView catgoriersCard;
     CatgoriersCard adapter2;
+    EditText search;
     //Drawer Menu
     DrawerLayout drawerLayout;
     NavigationView navigationView;
@@ -45,6 +47,7 @@ public class mmeennuu extends AppCompatActivity implements NavigationView.OnNavi
         getSupportActionBar().hide();
         setContentView(R.layout.activity_mmeennuu);
 
+        search = findViewById(R.id.edtSearch);
         featuredRecycler = findViewById(R.id.featred_recycler);
         featuredRecycler();
         viewedCard = findViewById(R.id.featred_recycler1);
@@ -99,7 +102,6 @@ public class mmeennuu extends AppCompatActivity implements NavigationView.OnNavi
 
         adapter1 = new ViewedCard(featuredLocations);
         viewedCard.setAdapter(adapter1);
-
         GradientDrawable gradient = new GradientDrawable(GradientDrawable.Orientation.LEFT_RIGHT, new int[]{0xffeff400, 0xffaff600});
 
     }
