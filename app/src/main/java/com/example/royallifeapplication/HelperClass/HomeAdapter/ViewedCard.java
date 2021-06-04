@@ -1,5 +1,6 @@
 package com.example.royallifeapplication.HelperClass.HomeAdapter;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.royallifeapplication.CGVmore;
 import com.example.royallifeapplication.R;
 
 import org.jetbrains.annotations.NotNull;
@@ -66,9 +68,28 @@ public class ViewedCard extends RecyclerView.Adapter<ViewedCard.FeaturedViewHode
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    int itemPosition=getAdapterPosition();
+                    int itemPosition = getAdapterPosition();
                     FeaturedHelpersClass item = featuredLocations.get(itemPosition);
-                    Toast.makeText(v.getContext(),item.description,Toast.LENGTH_LONG).show();
+                    final Intent intent;
+                    switch (getAdapterPosition()){
+                        case 0:
+                            Toast.makeText(v.getContext(),"The Item Clicked is: "+getAdapterPosition(),Toast.LENGTH_SHORT).show();
+                            intent =  new Intent(v.getContext(), CGVmore.class);
+                            v.getContext().startActivity(intent);
+                            break;
+                        case 1:
+                            Toast.makeText(v.getContext(),"The Item Clicked is: "+getAdapterPosition(),Toast.LENGTH_SHORT).show();
+                            //intent =  new Intent(v.getContext(), CGVmore.class);
+                            //v.getContext().startActivity(intent);
+                            break;
+                        default:
+                            Toast.makeText(v.getContext(),"The Item Clicked is: "+getAdapterPosition(),Toast.LENGTH_SHORT).show();
+                            //intent =  new Intent(v.getContext(), CGVmore.class);
+                            //v.getContext().startActivity(intent);
+                            break;
+                    }
+                   // v.getContext().startActivity(intent);
+
                 }
             });
 

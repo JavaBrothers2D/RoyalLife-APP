@@ -135,13 +135,21 @@ public class Login extends AppCompatActivity {
 
     private Boolean validateUsername() {
         String val = userLogin.getEditText().getText().toString();
+        String regularExpression1 = "^[a-zA-Z0-9]*[\\s]{1}[a-zA-Z0-9]*[$%#@#]{1}[a-zA-Z0-9]*$";
+        String regularExpression2 = "^[a-zA-Z0-9]*[$%#@#]{1}[a-zA-Z0-9]*[\\s]{1}[a-zA-Z0-9]*$";
         if (val.isEmpty()) {
             userLogin.setError("Field cannot be empty");
             return false;
         } else {
+            if (val.matches(regularExpression1) || val.matches(regularExpression2) ) {
+                System.out.println("Valid");
+            } else {
+                System.out.println("Invalid");
+            }
             userLogin.setError(null);
             return true;
         }
+
     }
 
     private Boolean validatePassword() {

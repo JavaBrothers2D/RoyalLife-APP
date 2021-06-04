@@ -71,6 +71,14 @@ public class SignUp extends AppCompatActivity {
                     return;
                 }else username.setError(null);
 
+                String regularExpression1 = "^[a-zA-Z0-9]*[\\s]{1}[a-zA-Z0-9]*[$%#@#]{1}[a-zA-Z0-9]*$";
+                String regularExpression2 = "^[a-zA-Z0-9]*[$%#@#]{1}[a-zA-Z0-9]*[\\s]{1}[a-zA-Z0-9]*$";
+                if (UserName.matches(regularExpression1) || UserName.matches(regularExpression2) ) {
+                    System.out.println("Valid");
+                } else {
+                    System.out.println("Invalid");
+                    return;
+                }
                 if(TextUtils.isEmpty(Email) || !isValidEmailId(email.getEditText().getText().toString().trim()) ){
                     email.setError("Email is Required");
                     email.requestFocus();
