@@ -1,9 +1,14 @@
 package com.example.royallifeapplication;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.content.res.Resources;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
@@ -16,13 +21,18 @@ import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import org.jetbrains.annotations.NotNull;
+
 public class Profile extends AppCompatActivity {
     TextInputLayout fullname, email, phoneN0, pass;
     TextView username;
-    ImageView back;
+    ImageView back,avatar;
     Button btnupdate;
     String fullnameDB,emailDB,phoneDB,passDB,userDB;
     DatabaseReference reference;
+
+    private static final int IMAGE_PICK_CODE = 1000;
+    private static final int PERMISSION_CODE = 1001;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +48,25 @@ public class Profile extends AppCompatActivity {
         phoneN0 = findViewById(R.id.edtProfilePhone);
         pass = findViewById(R.id.edtProfilePass);
         username = findViewById(R.id.txtProfileUsername);
+        //image
+        avatar = findViewById(R.id.avatar);
+        avatar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
+                    if(checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE)
+                            == PackageManager.PERMISSION_DENIED){
+                        String[] permission = {Manifest.permission.READ_EXTERNAL_STORAGE};
+                        requestPermissions(permission,PERMISSION_CODE);
+                    }else{
+                        pickImage();
+                    }
+                }else{
+                    pickImage();
+                }
+            }
+        });
+
         //show data
 
         showUser();
@@ -46,8 +75,9 @@ public class Profile extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), mmeennuu.class);
-                startActivity(intent);
+                //Intent intent = new Intent(getApplicationContext(), mmeennuu.class);
+                //startActivity(intent);
+                onBackPressed();
             }
         });
 
@@ -58,6 +88,34 @@ public class Profile extends AppCompatActivity {
                 update();
             }
         });
+    }
+
+    private void pickImage() {
+        Intent intent = new Intent(Intent.ACTION_PICK);
+        intent.setType("image/*");
+        startActivityForResult(intent,IMAGE_PICK_CODE);
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull @NotNull String[] permissions, @NonNull @NotNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        switch (requestCode) {
+            case PERMISSION_CODE: {
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    pickImage();
+                } else {
+                    Toast.makeText(this, "Permission Denied", Toast.LENGTH_LONG).show();
+                }
+            }
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable @org.jetbrains.annotations.Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(resultCode == RESULT_OK && requestCode == IMAGE_PICK_CODE){
+            avatar.setImageURI(data.getData());
+        }
     }
 
     private void showUser() {

@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -36,7 +37,7 @@ public class VerifyPhone extends AppCompatActivity {
     private TextInputLayout phonenumber;//,otpcode;
     private PinView otpcode;
     String userPhoneNum, verrificationId;
-
+    ImageView back;
     PhoneAuthProvider.ForceResendingToken token;
     FirebaseAuth fAuth;
 
@@ -58,6 +59,14 @@ public class VerifyPhone extends AppCompatActivity {
         //button
         verify = findViewById(R.id.btnVerify);
         sendotp = findViewById(R.id.btnSendotp);
+        back = findViewById(R.id.backtoSignup);
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
 
         otpcode = findViewById(R.id.pinviewOTP);
         //textview

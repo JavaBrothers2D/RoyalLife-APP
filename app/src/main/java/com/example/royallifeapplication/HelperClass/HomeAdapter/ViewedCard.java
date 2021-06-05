@@ -12,6 +12,13 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.royallifeapplication.CGVmore;
+import com.example.royallifeapplication.CGVmore1;
+import com.example.royallifeapplication.CGVmore3;
+import com.example.royallifeapplication.CGVmore4;
+import com.example.royallifeapplication.CGVmore5;
+import com.example.royallifeapplication.CGVmore6;
+import com.example.royallifeapplication.CGVmore7;
+import com.example.royallifeapplication.CGVmore8;
 import com.example.royallifeapplication.R;
 
 import org.jetbrains.annotations.NotNull;
@@ -79,8 +86,32 @@ public class ViewedCard extends RecyclerView.Adapter<ViewedCard.FeaturedViewHode
                             break;
                         case 1:
                             Toast.makeText(v.getContext(),"The Item Clicked is: "+getAdapterPosition(),Toast.LENGTH_SHORT).show();
-                            //intent =  new Intent(v.getContext(), CGVmore.class);
-                            //v.getContext().startActivity(intent);
+                            intent =  new Intent(v.getContext(), CGVmore1.class);
+                            v.getContext().startActivity(intent);
+                            break;
+                        case 2:
+                            intent =  new Intent(v.getContext(), CGVmore3.class);
+                            v.getContext().startActivity(intent);
+                            break;
+                        case 3:
+                            intent =  new Intent(v.getContext(), CGVmore4.class);
+                            v.getContext().startActivity(intent);
+                            break;
+                        case 4:
+                            intent =  new Intent(v.getContext(), CGVmore5.class);
+                            v.getContext().startActivity(intent);
+                            break;
+                        case 5:
+                            intent =  new Intent(v.getContext(), CGVmore6.class);
+                            v.getContext().startActivity(intent);
+                            break;
+                        case 6:
+                            intent =  new Intent(v.getContext(), CGVmore7.class);
+                            v.getContext().startActivity(intent);
+                            break;
+                        case 7:
+                            intent =  new Intent(v.getContext(), CGVmore8.class);
+                            v.getContext().startActivity(intent);
                             break;
                         default:
                             Toast.makeText(v.getContext(),"The Item Clicked is: "+getAdapterPosition(),Toast.LENGTH_SHORT).show();
