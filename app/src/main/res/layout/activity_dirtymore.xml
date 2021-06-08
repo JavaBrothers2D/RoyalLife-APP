@@ -16,37 +16,29 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:background="@drawable/imagecgv">
+            android:background="@drawable/imagedirty">
 
             <ImageView
-                android:id="@+id/backtoMenu"
+                android:id="@+id/backtoMenu2"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="20dp"
                 android:src="@drawable/backicon" />
 
-            <ImageView
-                android:id="@+id/avatar"
-                android:layout_width="90dp"
-                android:layout_height="90dp"
-                android:layout_marginLeft="0dp"
-                android:layout_marginTop="90dp"
-                android:src="@drawable/imgcgv" />
-
             <TextView
                 android:id="@+id/txtCGV"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/avatar"
                 android:layout_centerVertical="true"
-                android:layout_marginLeft="15dp"
+                android:layout_marginLeft="100dp"
                 android:layout_marginTop="-8dp"
                 android:includeFontPadding="false"
-                android:text="CGV Crescent Mall"
+                android:text="EON 51 Heli Bar"
                 android:textColor="@color/white"
-                android:textSize="20dp"
-                android:textStyle="bold" />
+                android:textSize="28dp"
+                android:textStyle="italic"
+                android:fontFamily="@font/bentham"/>
 
         </RelativeLayout>
 
@@ -57,7 +49,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginBottom="5dp"
-            android:text="CJ CGV is the largest film distributor and cinema operator in Vietnam and one of top 5 cinema chains in the world."
+            android:text="DirtyCoins xuất hiện trên thị trường từ đầu năm 2017, DirtyCoins mang sức mạnh của một thương hiệu local brand đầy cá tính với những sản phẩm thời trang hàng đầu xu thế. "
             android:textColor="@color/black"
             android:textSize="15sp" />
 
@@ -66,14 +58,14 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:text="Our mission is to become a role model company for continuous development of the film industry in Vietnam."
+            android:text=" Dirty Coins trở thành biểu tượng cho phong cách thời trang mạnh mẽ, táo bạo, và được ưa chuộng rộng rãi."
             android:textColor="@color/black"
             android:textSize="15sp" />
 
         <GridLayout
             android:id="@+id/recyclercgv"
-            android:layout_width="382dp"
-            android:layout_height="313dp"
+            android:layout_width="371dp"
+            android:layout_height="315dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="15dp"
             android:layout_marginRight="10dp"
@@ -82,39 +74,39 @@
             android:background="#fff">
 
             <ImageView
-                android:id="@+id/cgv1"
-                android:layout_width="120dp"
-                android:layout_height="97dp"
+                android:id="@+id/dirty3"
+                android:layout_width="241dp"
+                android:layout_height="203dp"
                 android:layout_row="0"
                 android:layout_column="0"
                 android:elevation="4dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/cgv1" />
+                android:src="@drawable/dirty3" />
 
             <ImageView
-                android:id="@+id/cgv2"
+                android:id="@+id/dirty2"
                 android:layout_width="120dp"
-                android:layout_height="97dp"
+                android:layout_height="203dp"
                 android:layout_row="0"
                 android:layout_column="1"
                 android:layout_marginLeft="7dp"
                 android:elevation="4dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/cgv2" />
+                android:src="@drawable/dirty2" />
 
             <ImageView
-                android:id="@+id/cgv3"
-                android:layout_width="120dp"
+                android:id="@+id/dirty4"
+                android:layout_width="243dp"
                 android:layout_height="97dp"
                 android:layout_row="1"
                 android:layout_column="0"
                 android:layout_marginTop="10dp"
                 android:elevation="4dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/cgv3" />
+                android:src="@drawable/dirty4" />
 
             <ImageView
-                android:id="@+id/cgv4"
+                android:id="@+id/dirty5"
                 android:layout_width="120dp"
                 android:layout_height="97dp"
                 android:layout_row="1"
@@ -123,65 +115,19 @@
                 android:layout_marginTop="10dp"
                 android:elevation="4dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/cgv4" />
+                android:src="@drawable/dirty5" />
 
             <ImageView
-                android:id="@+id/cgv5"
-                android:layout_width="120dp"
-                android:layout_height="97dp"
-                android:layout_row="2"
-                android:layout_column="2"
-                android:layout_marginLeft="7dp"
-                android:layout_marginTop="10dp"
-                android:elevation="4dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/cgv5" />
-
-            <ImageView
-                android:id="@+id/cgv6"
-                android:layout_width="120dp"
-                android:layout_height="97dp"
-                android:layout_row="1"
-                android:layout_column="2"
-                android:layout_marginLeft="7dp"
-                android:layout_marginTop="10dp"
-                android:elevation="4dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/cgv6" />
-
-            <ImageView
-                android:id="@+id/cgv7"
+                android:id="@+id/dirty1"
                 android:layout_width="120dp"
                 android:layout_height="97dp"
                 android:layout_row="2"
                 android:layout_column="0"
-                android:layout_marginTop="10dp"
-                android:elevation="4dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/cgv7" />
-
-            <ImageView
-                android:id="@+id/cgv8"
-                android:layout_width="120dp"
-                android:layout_height="97dp"
-                android:layout_row="0"
-                android:layout_column="2"
-                android:layout_marginLeft="7dp"
-                android:elevation="4dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/cgv8" />
-
-            <ImageView
-                android:id="@+id/cgv9"
-                android:layout_width="120dp"
-                android:layout_height="97dp"
-                android:layout_row="2"
-                android:layout_column="1"
                 android:layout_marginLeft="7dp"
                 android:layout_marginTop="10dp"
                 android:elevation="4dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/cgv9" />
+                android:src="@drawable/dirty1" />
 
         </GridLayout>
 
@@ -201,7 +147,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:text="Hotline: 1900 6017"
+            android:text="Số điện thoại: 0933 800 190 - 1900252557"
             android:textColor="@color/black"
             android:textSize="16sp" />
 
@@ -209,7 +155,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:text="Working hours: 8:00 - 22:00 (Monday to Sunday, including Public Holidays) "
+            android:text="Giờ mở cửa: 08:00 – 22:00"
             android:textColor="@color/black"
             android:textSize="16sp" />
 
@@ -217,7 +163,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:text="Email support: hoidap@cgv.vn"
+            android:text="Csteamdcs@gmail.com"
             android:textColor="@color/black"
             android:textSize="16sp" />
 

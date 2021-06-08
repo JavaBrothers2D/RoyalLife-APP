@@ -43,7 +43,8 @@ public class mmeennuu extends AppCompatActivity implements NavigationView.OnNavi
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();
         setContentView(R.layout.activity_mmeennuu);
 
@@ -78,9 +79,15 @@ public class mmeennuu extends AppCompatActivity implements NavigationView.OnNavi
         ArrayList<FeaturedHelpersClass> featuredLocations = new ArrayList<>();
 
         featuredLocations.add(new FeaturedHelpersClass(R.drawable.cgv, "CGV CINEMA", "CGV is one of the top 5 largest cinema clusters in the world and the largest distributor and cinema complex in Vietnam."));
-        featuredLocations.add(new FeaturedHelpersClass(R.drawable.kfc, "KFC", "KFC specializes in fried and grilled chicken products, with side dishes and sandwiches made from fresh chicken."));
-        featuredLocations.add(new FeaturedHelpersClass(R.drawable.mc, "McDonald's", "McDonald's is known as the world famous fast food restaurant system with more than 35,000 stores."));
-        featuredLocations.add(new FeaturedHelpersClass(R.drawable.gym, "California", "In 2007 California Fitness & Yoga became the first and largest international fitness company to launch in Vietnam."));
+        featuredLocations.add(new FeaturedHelpersClass(R.drawable.bareon52heliii, "EON 51 Heli Bar", "EON 51 Heli Bar – quán bar rooftop Sài Gòn nằm ở tầng thứ 51 của tòa nhà siêu hiện đại Bitexco Financial Tower."));
+        featuredLocations.add(new FeaturedHelpersClass(R.drawable.bad4, "BAD HABIT's", "[Bad Habits] là những thương hiệu thời trang  nội địa thuộc sở hữu [Double Bad Company] được đánh giá là hàng đầu."));
+        featuredLocations.add(new FeaturedHelpersClass(R.drawable.changvanglogo, "Chang Vang", "Nằm gọn gàng trong một con hẻm nhỏ trên đường Bạch Đằng, quán mang lại cảm giác tách biệt ra khỏi phố xá xô bồ để rồi vừa được ẩn mình ngắm Sài Gòn lại vừa được “chill”."));
+        featuredLocations.add(new FeaturedHelpersClass(R.drawable.dirty1, "Dirty Coins", "DirtyCoins mang sức mạnh của một thương hiệu local brand đầy cá tính với những sản phẩm thời trang hàng đầu xu thế."));
+        featuredLocations.add(new FeaturedHelpersClass(R.drawable.logogogi, "GoGi", "GoGi House – Quán thịt nướng Hàn Quốc Ngon Số 1 sẽ đưa bạn ghé đến những quán thịt nướng tại Seoul đã tạo nên danh tiếng cho nền ẩm thực xứ kim chi."));
+        featuredLocations.add(new FeaturedHelpersClass(R.drawable.logokichi, "KiChi-KiChi", "Kichi-Kichi là chuỗi nhà hàng chuyên về Buffet lẩu hàng đầu Việt Nam. Các món ăn ngon và đa dạng được phục vụ với hình thức băng chuyền độc đáo, hiện đại."));
+        featuredLocations.add(new FeaturedHelpersClass(R.drawable.logoskybar, "Chill SkyBar", "CHILL SKYBAR is a modern stylish and vibrant club and lounge bar that offers both an entertainment nightlife and social gathering experrience destination."));
+        featuredLocations.add(new FeaturedHelpersClass(R.drawable.winebar7, "WineBar SaiGon", "The lavish Saigon Social Club Rooftop Bar and Lounge at Hôtel des Arts Saigon regularly receives rave reviews for its Sunday brunch."));
+        featuredLocations.add(new FeaturedHelpersClass(R.drawable.logozahrahhh, "Zahrah Rooftop", "Zahrah Coffee Lounge &amp; Rooftop như một ốc đảo Trung Đông, không gian được trau chuốt bởi các chi tiết decor sẽ khiến bạn thực sự bay bổng trong đêm Ả Rập huyền bí."));
 
         adapter = new FeatureAdpater(featuredLocations);
         featuredRecycler.setAdapter(adapter);
@@ -96,9 +103,9 @@ public class mmeennuu extends AppCompatActivity implements NavigationView.OnNavi
         ArrayList<FeaturedHelpersClass> featuredLocations = new ArrayList<>();
 
         featuredLocations.add(new FeaturedHelpersClass(R.drawable.cgv, "CGV CINEMA", "CGV is one of the top 5 largest cinema clusters in the world and the largest distributor and cinema complex in Vietnam."));
-        featuredLocations.add(new FeaturedHelpersClass(R.drawable.kfc, "KFC", "KFC specializes in fried and grilled chicken products, with side dishes and sandwiches made from fresh chicken."));
-        featuredLocations.add(new FeaturedHelpersClass(R.drawable.mc, "McDonald's", "McDonald's is known as the world famous fast food restaurant system with more than 35,000 stores."));
-        featuredLocations.add(new FeaturedHelpersClass(R.drawable.gym, "California", "In 2007 California Fitness & Yoga became the first and largest international fitness company to launch in Vietnam."));
+        featuredLocations.add(new FeaturedHelpersClass(R.drawable.logozahrahhh, "Zahrah Rooftop", "Zahrah Coffee Lounge &amp; Rooftop như một ốc đảo Trung Đông, không gian được trau chuốt bởi các chi tiết decor sẽ khiến bạn thực sự bay bổng trong đêm Ả Rập huyền bí."));
+        featuredLocations.add(new FeaturedHelpersClass(R.drawable.bad4, "BAD HABIT's", "[Bad Habits] là những thương hiệu thời trang  nội địa thuộc sở hữu [Double Bad Company] được đánh giá là hàng đầu."));
+        featuredLocations.add(new FeaturedHelpersClass(R.drawable.logokichi, "KiChi-KiChi", "Kichi-Kichi là chuỗi nhà hàng chuyên về Buffet lẩu hàng đầu Việt Nam. Các món ăn ngon và đa dạng được phục vụ với hình thức băng chuyền độc đáo, hiện đại."));
 
         adapter1 = new ViewedCard(featuredLocations);
         viewedCard.setAdapter(adapter1);

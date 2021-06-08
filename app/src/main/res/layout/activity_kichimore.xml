@@ -16,37 +16,29 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:background="@drawable/imagecgv">
+            android:background="@drawable/kichi">
 
             <ImageView
-                android:id="@+id/backtoMenu"
+                android:id="@+id/backtoMenu8"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="20dp"
                 android:src="@drawable/backicon" />
 
-            <ImageView
-                android:id="@+id/avatar"
-                android:layout_width="90dp"
-                android:layout_height="90dp"
-                android:layout_marginLeft="0dp"
-                android:layout_marginTop="90dp"
-                android:src="@drawable/imgcgv" />
 
             <TextView
                 android:id="@+id/txtCGV"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/avatar"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="-8dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="165dp"
                 android:includeFontPadding="false"
-                android:text="CGV Crescent Mall"
+                android:text="KICHI-KICHI"
                 android:textColor="@color/white"
-                android:textSize="20dp"
-                android:textStyle="bold" />
+                android:textSize="26dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/baloo"/>
 
         </RelativeLayout>
 
@@ -57,7 +49,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginBottom="5dp"
-            android:text="CJ CGV is the largest film distributor and cinema operator in Vietnam and one of top 5 cinema chains in the world."
+            android:text="Kichi-Kichi là chuỗi nhà hàng chuyên về Buffet lẩu hàng đầu Việt Nam. Các món ăn ngon và đa dạng được phục vụ với hình thức băng chuyền độc đáo, hiện đại, vốn là sự kết hợp của phong cách phục vụ Kaiten đến từ Nhật Bản với kiến trúc hiện đại."
             android:textColor="@color/black"
             android:textSize="15sp" />
 
@@ -66,7 +58,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:text="Our mission is to become a role model company for continuous development of the film industry in Vietnam."
+            android:text="Chỉ với một giá cố định, khách hàng được thưởng thức không hạn chế gần 100 sản phẩm nhúng lẩu đặc sắc như bò Mỹ nhập khẩu, cá hồi nguyên con, rau sạch, nấm tươi theo mùa,…"
             android:textColor="@color/black"
             android:textSize="15sp" />
 
@@ -82,17 +74,17 @@
             android:background="#fff">
 
             <ImageView
-                android:id="@+id/cgv1"
+                android:id="@+id/chiki1"
                 android:layout_width="120dp"
                 android:layout_height="97dp"
                 android:layout_row="0"
                 android:layout_column="0"
                 android:elevation="4dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/cgv1" />
+                android:src="@drawable/chiki1" />
 
             <ImageView
-                android:id="@+id/cgv2"
+                android:id="@+id/chiki2"
                 android:layout_width="120dp"
                 android:layout_height="97dp"
                 android:layout_row="0"
@@ -100,10 +92,10 @@
                 android:layout_marginLeft="7dp"
                 android:elevation="4dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/cgv2" />
+                android:src="@drawable/chiki2" />
 
             <ImageView
-                android:id="@+id/cgv3"
+                android:id="@+id/chiki3"
                 android:layout_width="120dp"
                 android:layout_height="97dp"
                 android:layout_row="1"
@@ -111,10 +103,10 @@
                 android:layout_marginTop="10dp"
                 android:elevation="4dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/cgv3" />
+                android:src="@drawable/chiki3" />
 
             <ImageView
-                android:id="@+id/cgv4"
+                android:id="@+id/chiki4"
                 android:layout_width="120dp"
                 android:layout_height="97dp"
                 android:layout_row="1"
@@ -123,10 +115,10 @@
                 android:layout_marginTop="10dp"
                 android:elevation="4dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/cgv4" />
+                android:src="@drawable/chiki4" />
 
             <ImageView
-                android:id="@+id/cgv5"
+                android:id="@+id/chiki5"
                 android:layout_width="120dp"
                 android:layout_height="97dp"
                 android:layout_row="2"
@@ -135,10 +127,10 @@
                 android:layout_marginTop="10dp"
                 android:elevation="4dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/cgv5" />
+                android:src="@drawable/chiki5" />
 
             <ImageView
-                android:id="@+id/cgv6"
+                android:id="@+id/chiki6"
                 android:layout_width="120dp"
                 android:layout_height="97dp"
                 android:layout_row="1"
@@ -147,10 +139,10 @@
                 android:layout_marginTop="10dp"
                 android:elevation="4dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/cgv6" />
+                android:src="@drawable/chiki6" />
 
             <ImageView
-                android:id="@+id/cgv7"
+                android:id="@+id/chiki7"
                 android:layout_width="120dp"
                 android:layout_height="97dp"
                 android:layout_row="2"
@@ -158,10 +150,10 @@
                 android:layout_marginTop="10dp"
                 android:elevation="4dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/cgv7" />
+                android:src="@drawable/chiki7" />
 
             <ImageView
-                android:id="@+id/cgv8"
+                android:id="@+id/chiki8"
                 android:layout_width="120dp"
                 android:layout_height="97dp"
                 android:layout_row="0"
@@ -169,10 +161,10 @@
                 android:layout_marginLeft="7dp"
                 android:elevation="4dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/cgv8" />
+                android:src="@drawable/chiki8" />
 
             <ImageView
-                android:id="@+id/cgv9"
+                android:id="@+id/chiki9"
                 android:layout_width="120dp"
                 android:layout_height="97dp"
                 android:layout_row="2"
@@ -181,7 +173,7 @@
                 android:layout_marginTop="10dp"
                 android:elevation="4dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/cgv9" />
+                android:src="@drawable/chiki9" />
 
         </GridLayout>
 
@@ -201,7 +193,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:text="Hotline: 1900 6017"
+            android:text="Hotline: 043 222 3000"
             android:textColor="@color/black"
             android:textSize="16sp" />
 
@@ -217,7 +209,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:text="Email support: hoidap@cgv.vn"
+            android:text="Email support: support.hn@ggg.com.vn"
             android:textColor="@color/black"
             android:textSize="16sp" />
 

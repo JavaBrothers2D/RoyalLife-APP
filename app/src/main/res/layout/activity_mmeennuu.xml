@@ -216,7 +216,7 @@
 
                     <LinearLayout
                         android:id="@+id/featured_background"
-                        android:layout_width="170dp"
+                        android:layout_width="110dp"
                         android:layout_height="300dp"
                         android:layout_margin="10dp"
                         android:background="#F8F8FF"

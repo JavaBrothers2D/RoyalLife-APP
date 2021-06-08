@@ -11,15 +11,17 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.royallifeapplication.CGVmore;
-import com.example.royallifeapplication.CGVmore1;
-import com.example.royallifeapplication.CGVmore3;
-import com.example.royallifeapplication.CGVmore4;
-import com.example.royallifeapplication.CGVmore5;
-import com.example.royallifeapplication.CGVmore6;
-import com.example.royallifeapplication.CGVmore7;
-import com.example.royallifeapplication.CGVmore8;
+import com.example.royallifeapplication.ZahRah;
+import com.example.royallifeapplication.cgv;
+import com.example.royallifeapplication.changvang;
+import com.example.royallifeapplication.dirty;
+import com.example.royallifeapplication.gogi;
+import com.example.royallifeapplication.heli;
+import com.example.royallifeapplication.badhabbit;
 import com.example.royallifeapplication.R;
+import com.example.royallifeapplication.kichi;
+import com.example.royallifeapplication.skybar;
+import com.example.royallifeapplication.wine;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -80,37 +82,23 @@ public class ViewedCard extends RecyclerView.Adapter<ViewedCard.FeaturedViewHode
                     final Intent intent;
                     switch (getAdapterPosition()){
                         case 0:
-                            Toast.makeText(v.getContext(),"The Item Clicked is: "+getAdapterPosition(),Toast.LENGTH_SHORT).show();
-                            intent =  new Intent(v.getContext(), CGVmore.class);
+                            Toast.makeText(v.getContext(),"The Item Clicked is: "+item.getTitle(),Toast.LENGTH_SHORT).show();
+                            intent =  new Intent(v.getContext(), cgv.class);
                             v.getContext().startActivity(intent);
                             break;
                         case 1:
-                            Toast.makeText(v.getContext(),"The Item Clicked is: "+getAdapterPosition(),Toast.LENGTH_SHORT).show();
-                            intent =  new Intent(v.getContext(), CGVmore1.class);
+                            Toast.makeText(v.getContext(),"The Item Clicked is: "+item.getTitle(),Toast.LENGTH_SHORT).show();
+                            intent =  new Intent(v.getContext(), heli.class);
                             v.getContext().startActivity(intent);
                             break;
                         case 2:
-                            intent =  new Intent(v.getContext(), CGVmore3.class);
+                            Toast.makeText(v.getContext(),"The Item Clicked is: "+item.getTitle(),Toast.LENGTH_SHORT).show();
+                            intent =  new Intent(v.getContext(), badhabbit.class);
                             v.getContext().startActivity(intent);
                             break;
                         case 3:
-                            intent =  new Intent(v.getContext(), CGVmore4.class);
-                            v.getContext().startActivity(intent);
-                            break;
-                        case 4:
-                            intent =  new Intent(v.getContext(), CGVmore5.class);
-                            v.getContext().startActivity(intent);
-                            break;
-                        case 5:
-                            intent =  new Intent(v.getContext(), CGVmore6.class);
-                            v.getContext().startActivity(intent);
-                            break;
-                        case 6:
-                            intent =  new Intent(v.getContext(), CGVmore7.class);
-                            v.getContext().startActivity(intent);
-                            break;
-                        case 7:
-                            intent =  new Intent(v.getContext(), CGVmore8.class);
+                            Toast.makeText(v.getContext(),"The Item Clicked is: "+item.getTitle(),Toast.LENGTH_SHORT).show();
+                            intent =  new Intent(v.getContext(), changvang.class);
                             v.getContext().startActivity(intent);
                             break;
                         default:

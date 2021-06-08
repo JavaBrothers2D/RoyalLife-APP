@@ -11,10 +11,16 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.royallifeapplication.CGVmore;
-import com.example.royallifeapplication.CGVmore6;
-import com.example.royallifeapplication.CGVmore7;
-import com.example.royallifeapplication.CGVmore8;
+import com.example.royallifeapplication.ZahRah;
+import com.example.royallifeapplication.badhabbit;
+import com.example.royallifeapplication.cgv;
+import com.example.royallifeapplication.changvang;
+import com.example.royallifeapplication.dirty;
+import com.example.royallifeapplication.gogi;
+import com.example.royallifeapplication.heli;
+import com.example.royallifeapplication.kichi;
+import com.example.royallifeapplication.skybar;
+import com.example.royallifeapplication.wine;
 import com.example.royallifeapplication.R;
 
 import org.jetbrains.annotations.NotNull;
@@ -23,7 +29,7 @@ import java.util.ArrayList;
 
 public class FeatureAdpater extends RecyclerView.Adapter<FeatureAdpater.FeaturedViewHolder> {
 
-    ArrayList<FeaturedHelpersClass>featuredLocations;
+    public ArrayList<FeaturedHelpersClass>featuredLocations;
 
     public FeatureAdpater(ArrayList<FeaturedHelpersClass> featuredLocations) {
         this.featuredLocations = featuredLocations;
@@ -72,42 +78,59 @@ public class FeatureAdpater extends RecyclerView.Adapter<FeatureAdpater.Featured
                 @Override
                 public void onClick(View v) {
                     int itemPosition = getAdapterPosition();
+                    //FeaturedHelpersClass i =
                     //FeaturedHelpersClass item = f
                     //FeaturedHelpersClass item = featuredLocations.get(itemPosition);
                     final Intent intent;
                     switch (getAdapterPosition()){
                         case 0:
                             Toast.makeText(v.getContext(),"The Item Clicked is: "+getAdapterPosition(),Toast.LENGTH_SHORT).show();
-                            intent =  new Intent(v.getContext(), CGVmore.class);
+                            intent =  new Intent(v.getContext(), cgv.class);
                             v.getContext().startActivity(intent);
                             break;
                         case 1:
                             Toast.makeText(v.getContext(),"The Item Clicked is: "+getAdapterPosition(),Toast.LENGTH_SHORT).show();
-                            intent =  new Intent(v.getContext(), CGVmore.class);
+                            intent =  new Intent(v.getContext(), heli.class);
                             v.getContext().startActivity(intent);
                             break;
                         case 2:
-                            intent =  new Intent(v.getContext(), CGVmore.class);
+                            Toast.makeText(v.getContext(),"The Item Clicked is: "+getAdapterPosition(),Toast.LENGTH_SHORT).show();
+                            intent =  new Intent(v.getContext(), badhabbit.class);
                             v.getContext().startActivity(intent);
                             break;
                         case 3:
-                            intent =  new Intent(v.getContext(), CGVmore.class);
+                            Toast.makeText(v.getContext(),"The Item Clicked is: "+getAdapterPosition(),Toast.LENGTH_SHORT).show();
+                            intent =  new Intent(v.getContext(), changvang.class);
                             v.getContext().startActivity(intent);
                             break;
                         case 4:
-                            intent =  new Intent(v.getContext(), CGVmore.class);
+                            Toast.makeText(v.getContext(),"The Item Clicked is: "+getAdapterPosition(),Toast.LENGTH_SHORT).show();
+                            intent =  new Intent(v.getContext(), dirty.class);
                             v.getContext().startActivity(intent);
                             break;
                         case 5:
-                            intent =  new Intent(v.getContext(), CGVmore6.class);
+                            Toast.makeText(v.getContext(),"The Item Clicked is: "+getAdapterPosition(),Toast.LENGTH_SHORT).show();
+                            intent =  new Intent(v.getContext(), gogi.class);
                             v.getContext().startActivity(intent);
                             break;
                         case 6:
-                            intent =  new Intent(v.getContext(), CGVmore7.class);
+                            Toast.makeText(v.getContext(),"The Item Clicked is: "+getAdapterPosition(),Toast.LENGTH_SHORT).show();
+                            intent =  new Intent(v.getContext(), kichi.class);
                             v.getContext().startActivity(intent);
                             break;
                         case 7:
-                            intent =  new Intent(v.getContext(), CGVmore8.class);
+                            Toast.makeText(v.getContext(),"The Item Clicked is: "+getAdapterPosition(),Toast.LENGTH_SHORT).show();
+                            intent =  new Intent(v.getContext(), skybar.class);
+                            v.getContext().startActivity(intent);
+                            break;
+                        case 8:
+                            Toast.makeText(v.getContext(),"The Item Clicked is: "+getAdapterPosition(),Toast.LENGTH_SHORT).show();
+                            intent =  new Intent(v.getContext(), wine.class);
+                            v.getContext().startActivity(intent);
+                            break;
+                        case 9:
+                            Toast.makeText(v.getContext(),"The Item Clicked is: "+getAdapterPosition(),Toast.LENGTH_SHORT).show();
+                            intent =  new Intent(v.getContext(), ZahRah.class);
                             v.getContext().startActivity(intent);
                             break;
                         default:
