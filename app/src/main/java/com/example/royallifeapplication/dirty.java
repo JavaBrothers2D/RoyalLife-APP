@@ -31,7 +31,7 @@ public class dirty extends AppCompatActivity {
             public void onClick(View v) {
                 mapMethod method = new mapMethod();
                 Intent intent = new Intent(android.content.Intent.ACTION_VIEW,
-                        Uri.parse(R.string.defaultSearchString+ "Dirty Coins" +"/@"
+                        Uri.parse(getString(R.string.defaultSearchString)+ "Dirty Coins" +"/@"
                                 + method.getLatitude() + "," + method.getLongitude() + ","+"10z/data=!3m1!4b1"));
                 startActivity(intent);
             }

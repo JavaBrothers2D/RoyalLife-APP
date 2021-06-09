@@ -35,7 +35,7 @@ public class wine extends AppCompatActivity {
             public void onClick(View v) {
                 mapMethod method = new mapMethod();
                 Intent intent = new Intent(android.content.Intent.ACTION_VIEW,
-                        Uri.parse(R.string.defaultSearchString+ "Wine bar" +"/@"
+                        Uri.parse(getString(R.string.defaultSearchString)+ "Wine bar" +"/@"
                                 + method.getLatitude() + "," + method.getLongitude() + ","+"10z/data=!3m1!4b1"));
                 startActivity(intent);
             }
