@@ -41,11 +41,14 @@
                 android:src="@drawable/imagebad" />
 
             <ImageView
+                android:id="@+id/txtName"
                 android:layout_width="100dp"
                 android:layout_height="50dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="150dp"
                 android:src="@drawable/image2bad" />
+
+
 
 
         </RelativeLayout>
@@ -219,7 +222,8 @@
             android:layout_marginLeft="10dp"
             android:text="badhabits95.store@gmail.com"
             android:textColor="@color/black"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:id="@+id/badAddr"/>
 
         <RatingBar
             style="@style/Widget.AppCompat.RatingBar.Small"

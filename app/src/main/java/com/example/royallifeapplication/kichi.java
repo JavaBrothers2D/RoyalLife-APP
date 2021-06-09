@@ -3,14 +3,17 @@ package com.example.royallifeapplication;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class kichi extends AppCompatActivity {
     ImageView imgback,bad1,bad2,bad3,bad4,bad5,bad6,bad7,bad8,bad9;
+    TextView add;
     private String fullScreenInd;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +29,17 @@ public class kichi extends AppCompatActivity {
         bad7 = findViewById(R.id.gogi7);
         bad8 = findViewById(R.id.gogi8);
         bad9 = findViewById(R.id.gogi9);
+        add = findViewById(R.id.kichiAdd);
+        add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mapMethod method = new mapMethod();
+                Intent intent = new Intent(android.content.Intent.ACTION_VIEW,
+                        Uri.parse(getString(R.string.defaultSearchString)+ "Kichi" +"/@"
+                                + method.getLatitude() + "," + method.getLongitude() + ","+"10z/data=!3m1!4b1"));
+                startActivity(intent);
+            }
+        });
 
         //backmenu
         imgback.setOnClickListener(new View.OnClickListener() {

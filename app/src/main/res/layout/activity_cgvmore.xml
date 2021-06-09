@@ -219,7 +219,8 @@
             android:layout_marginLeft="10dp"
             android:text="Email support: hoidap@cgv.vn"
             android:textColor="@color/black"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:id="@+id/txtCGVName"/>
 
         <RatingBar
             style="@style/Widget.AppCompat.RatingBar.Small"

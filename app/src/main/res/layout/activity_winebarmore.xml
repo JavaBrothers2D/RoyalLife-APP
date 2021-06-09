@@ -49,7 +49,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginBottom="5dp"
-            android:text="The lavish Saigon Social Club Rooftop Bar and Lounge at Hôtel des Arts Saigon regularly receives rave reviews for its Sunday brunch, it should also be recognised as a top notch destination for wine connoisseurs."
+            android:text="The lavish Saigon Social Club Rooftop Bar and Lounge at Hotel des Arts Saigon regularly receives rave reviews for its Sunday brunch, it should also be recognised as a top notch destination for wine connoisseurs."
             android:textColor="@color/black"
             android:textSize="15sp" />
 
@@ -206,6 +206,7 @@
             android:textSize="16sp" />
 
         <TextView
+            android:id="@+id/wineAdd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"

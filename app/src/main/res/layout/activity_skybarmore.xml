@@ -219,7 +219,8 @@
             android:layout_marginLeft="10dp"
             android:text="Email support: info@chillsaigon.com"
             android:textColor="@color/black"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:id="@+id/SkybarAdd"/>
 
         <RatingBar
             style="@style/Widget.AppCompat.RatingBar.Small"
