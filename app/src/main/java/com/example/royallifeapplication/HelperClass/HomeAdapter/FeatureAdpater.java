@@ -11,14 +11,14 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.royallifeapplication.ZahRah;
 import com.example.royallifeapplication.badhabbit;
 import com.example.royallifeapplication.cgv;
 import com.example.royallifeapplication.changvang;
 import com.example.royallifeapplication.dirty;
 import com.example.royallifeapplication.gogi;
 import com.example.royallifeapplication.heli;
-import com.example.royallifeapplication.kichi;
+import com.example.royallifeapplication.kichii;
+import com.example.royallifeapplication.rooftopzahrah;
 import com.example.royallifeapplication.skybar;
 import com.example.royallifeapplication.wine;
 import com.example.royallifeapplication.R;
@@ -115,7 +115,7 @@ public class FeatureAdpater extends RecyclerView.Adapter<FeatureAdpater.Featured
                             break;
                         case 6:
                             Toast.makeText(v.getContext(),"The Item Clicked is: "+getAdapterPosition(),Toast.LENGTH_SHORT).show();
-                            intent =  new Intent(v.getContext(), kichi.class);
+                            intent =  new Intent(v.getContext(), kichii.class);
                             v.getContext().startActivity(intent);
                             break;
                         case 7:
@@ -130,7 +130,7 @@ public class FeatureAdpater extends RecyclerView.Adapter<FeatureAdpater.Featured
                             break;
                         case 9:
                             Toast.makeText(v.getContext(),"The Item Clicked is: "+getAdapterPosition(),Toast.LENGTH_SHORT).show();
-                            intent =  new Intent(v.getContext(), ZahRah.class);
+                            intent =  new Intent(v.getContext(), rooftopzahrah.class);
                             v.getContext().startActivity(intent);
                             break;
                         default:

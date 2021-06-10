@@ -11,17 +11,11 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.royallifeapplication.ZahRah;
 import com.example.royallifeapplication.cgv;
 import com.example.royallifeapplication.changvang;
-import com.example.royallifeapplication.dirty;
-import com.example.royallifeapplication.gogi;
-import com.example.royallifeapplication.heli;
 import com.example.royallifeapplication.badhabbit;
 import com.example.royallifeapplication.R;
-import com.example.royallifeapplication.kichi;
-import com.example.royallifeapplication.skybar;
-import com.example.royallifeapplication.wine;
+import com.example.royallifeapplication.rooftopzahrah;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -88,7 +82,7 @@ public class ViewedCard extends RecyclerView.Adapter<ViewedCard.FeaturedViewHode
                             break;
                         case 1:
                             Toast.makeText(v.getContext(),"The Item Clicked is: "+item.getTitle(),Toast.LENGTH_SHORT).show();
-                            intent =  new Intent(v.getContext(), heli.class);
+                            intent =  new Intent(v.getContext(), rooftopzahrah.class);
                             v.getContext().startActivity(intent);
                             break;
                         case 2:

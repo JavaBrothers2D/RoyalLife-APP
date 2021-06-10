@@ -4,8 +4,10 @@ import android.content.Intent;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.WindowManager;
 import android.widget.EditText;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -30,6 +32,7 @@ public class mmeennuu extends AppCompatActivity implements NavigationView.OnNavi
 
     RecyclerView viewedCard;
     ViewedCard adapter1;
+    ImageView res,barpub;
     RecyclerView featuredRecycler;
     FeatureAdpater adapter;
     RecyclerView catgoriersCard;
@@ -47,6 +50,7 @@ public class mmeennuu extends AppCompatActivity implements NavigationView.OnNavi
         getSupportActionBar().hide();
         setContentView(R.layout.activity_mmeennuu);
 
+        res = findViewById(R.id.restaur);
         search = findViewById(R.id.edtSearch);
         featuredRecycler = findViewById(R.id.featred_recycler);
         featuredRecycler();
@@ -68,6 +72,21 @@ public class mmeennuu extends AppCompatActivity implements NavigationView.OnNavi
         navigationView.bringToFront();
         navigationView.setNavigationItemSelectedListener(this);
         navigationView.getCheckedItem();
+        barpub = findViewById(R.id.barpub);
+        barpub.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), barpub.class);
+                startActivity(intent);
+            }
+        });
+        res.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Foods.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void featuredRecycler() {
@@ -133,19 +152,7 @@ public class mmeennuu extends AppCompatActivity implements NavigationView.OnNavi
     //onclick
     @Override
     public boolean onNavigationItemSelected(@NonNull @NotNull MenuItem item) {
-        switch (item.getItemId()){
-            case R.id.navProfile:
-                showprofile();
-                break;
-            case R.id.SignoutMenu:
-                FirebaseAuth.getInstance().signOut();
-                Intent intentt = new Intent(mmeennuu.this,Login.class);
-                intentt.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK| Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                startActivity(intentt);
-                break;
-        }
-        drawerLayout.closeDrawer(GravityCompat.START);
-        return true;
+        return false;
     }
 
     @Override

@@ -12,10 +12,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RoyalLifeApplication">
-        <activity android:name=".ZahRahMore"></activity>
+        <activity android:name=".kichii"></activity>
+        <activity android:name=".rooftopzahrah" />
+        <activity android:name=".barpub" />
+        <activity android:name=".show" />
+        <activity android:name=".MainActivity2" />
+        <activity android:name=".Foods" />
+        <activity android:name=".ZahRahMore" />
         <activity android:name=".wine" />
         <activity android:name=".skybar" />
-        <activity android:name=".kichi" />
         <activity android:name=".gogi" />
         <activity android:name=".dirty" />
         <activity android:name=".changvang" />

@@ -26,15 +26,16 @@ public class heli extends AppCompatActivity {
         imgback = findViewById(R.id.backtoMenu10);
 
         add = findViewById(R.id.heliAddr);
-        bad1 = findViewById(R.id.gogi1);
-        bad2 = findViewById(R.id.gogi2);
-        bad3 = findViewById(R.id.gogi3);
-        bad4 = findViewById(R.id.gogi4);
-        bad5 = findViewById(R.id.gogi5);
-        bad6 = findViewById(R.id.gogi6);
-        bad7 = findViewById(R.id.gogi7);
-        bad8 = findViewById(R.id.gogi8);
-        bad9 = findViewById(R.id.gogi9);
+
+        bad1 = findViewById(R.id.heli1);
+        bad2 = findViewById(R.id.heli2);
+        bad3 = findViewById(R.id.heli3);
+        bad4 = findViewById(R.id.heli4);
+        bad5 = findViewById(R.id.heli5);
+        bad6 = findViewById(R.id.heli6);
+        bad7 = findViewById(R.id.heli7);
+        bad8 = findViewById(R.id.heli8);
+        bad9 = findViewById(R.id.heli9);
         //binding View by findViewById
 
         add.setOnClickListener(new View.OnClickListener() {
