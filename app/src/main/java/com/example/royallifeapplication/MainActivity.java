@@ -1,9 +1,4 @@
 package com.example.royallifeapplication;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-
 import android.Manifest;
 import android.app.ActivityOptions;
 import android.content.Context;
@@ -21,6 +16,10 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.model.LatLng;
@@ -30,12 +29,11 @@ public class MainActivity extends AppCompatActivity {
     private static int SPLASH_SCREEN = 2000;
 
     public static double latitude, longtitude;
-
     //Map variables
     private LocationManager locationManager;
     private LocationListener locationListener;
     private LatLng userLatLng;
-    private GoogleMap mMap;
+    GoogleMap mMap;
 
 
     //Variables
@@ -55,15 +53,13 @@ public class MainActivity extends AppCompatActivity {
         locationManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
         locationListener = new LocationListener() {
             @Override
-            public void onLocationChanged(@NonNull Location location) {
+            public void onLocationChanged( Location location) {
                 userLatLng = new LatLng(location.getLatitude(),location.getLongitude());
                 mMap.clear();
                 mMap.addMarker(new MarkerOptions().position(userLatLng).title("Your location"));
                 mMap.moveCamera(CameraUpdateFactory.newLatLng(userLatLng));
             }
         };
-
-
 
 
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
@@ -102,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
                 Intent intent = new Intent(MainActivity.this,Login.class);//login
-
+                
                 Pair[] pairs = new Pair[2];
                 pairs[0] = new Pair<View,String>(image, "logo_image");
                 pairs[1] = new Pair<View,String>(logo, "logo_text");

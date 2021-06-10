@@ -5,6 +5,7 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#fff"
 
     tools:context=".mmeennuu"
     tools:openDrawer="start">
@@ -14,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:background="@color/white"
+        android:background="#fff"
         app:headerLayout="@layout/hearder_menu"
         app:menu="@menu/main_menu" />
 
@@ -132,7 +133,7 @@
                                 android:layout_centerInParent="true"
                                 android:layout_gravity="center"
                                 android:layout_marginTop="15dp"
-                                android:background="@drawable/hotelss" />
+                                android:background="@drawable/food" />
 
                         </LinearLayout>
 
@@ -161,6 +162,7 @@
 
                             <ImageView
                                 android:layout_width="30dp"
+                                android:id="@+id/shopping"
                                 android:layout_height="30dp"
                                 android:layout_centerInParent="true"
                                 android:background="@drawable/iconshopping" />
@@ -193,6 +195,7 @@
                             <ImageView
                                 android:layout_width="30dp"
                                 android:layout_height="30dp"
+                                android:id="@+id/cinema"
                                 android:layout_centerInParent="true"
                                 android:background="@drawable/cinemaicon" />
 
@@ -219,7 +222,7 @@
 
                     <LinearLayout
                         android:id="@+id/featured_background"
-                        android:layout_width="110dp"
+                        android:layout_width="120dp"
                         android:layout_height="300dp"
                         android:layout_margin="10dp"
                         android:background="#F8F8FF"
@@ -230,21 +233,22 @@
                             android:id="@+id/txtView0"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
+                            android:layout_marginLeft="5dp"
                             android:layout_marginTop="50dp"
                             android:fontFamily="@font/bentham"
                             android:padding="10dp"
                             android:text="ALL FEATURED LOCATIONS"
                             android:textAllCaps="true"
                             android:textColor="@color/black"
-                            android:textSize="24sp"
+                            android:textSize="22sp"
                             android:textStyle="bold" />
 
                         <TextView
-                            android:layout_width="150dp"
+                            android:layout_width="108dp"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
+                            android:layout_marginLeft="7dp"
                             android:layout_marginTop="-10dp"
+                            android:layout_marginRight="3dp"
                             android:padding="10dp"
                             android:text="All the location that are featured and have the top demand in town!" />
 
@@ -256,7 +260,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_toRightOf="@+id/featured_background"
-                        android:background="#F8F8FF">
+                        android:background="#fff">
 
                     </androidx.recyclerview.widget.RecyclerView>
 
@@ -299,7 +303,7 @@
                         android:id="@+id/featred_recycler1"
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
-                        android:background="#F8F8FF">
+                        android:background="#fff">
 
                     </androidx.recyclerview.widget.RecyclerView>
 
@@ -341,7 +345,7 @@
                         android:id="@+id/featred_recycler2"
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
-                        android:background="#F8F8FF" />
+                        android:background="#fff" />
 
                 </LinearLayout>
 

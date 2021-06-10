@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".VerifyPhone"
     android:orientation="vertical"
-    android:padding="40dp">
+    android:padding="40dp"
+    android:background="#fff">
 
     <ImageView
         android:id="@+id/backtoSignup"

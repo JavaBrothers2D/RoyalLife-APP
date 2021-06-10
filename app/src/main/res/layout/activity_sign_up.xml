@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".SignUp"
     android:padding="20dp"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#fff">
 
     <ImageView
         android:id="@+id/backto"

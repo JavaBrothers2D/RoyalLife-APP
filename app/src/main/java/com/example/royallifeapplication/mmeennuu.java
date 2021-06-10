@@ -33,7 +33,7 @@ public class mmeennuu extends AppCompatActivity implements NavigationView.OnNavi
 
     RecyclerView viewedCard;
     ViewedCard adapter1;
-    ImageView res,barpub;
+    ImageView res,barpub,shopping,cinema;
     RecyclerView featuredRecycler;
     FeatureAdpater adapter;
     RecyclerView catgoriersCard;
@@ -71,6 +71,8 @@ public class mmeennuu extends AppCompatActivity implements NavigationView.OnNavi
         navigationView.setNavigationItemSelectedListener(this);
         navigationView.getCheckedItem();
         barpub = findViewById(R.id.barpub);
+        shopping = findViewById(R.id.shopping);
+        cinema = findViewById(R.id.cinema);
         barpub.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -82,6 +84,20 @@ public class mmeennuu extends AppCompatActivity implements NavigationView.OnNavi
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), Foods.class);
+                startActivity(intent);
+            }
+        });
+        shopping.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), shopping.class);
+                startActivity(intent);
+            }
+        });
+        cinema.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Cinema.class);
                 startActivity(intent);
             }
         });
@@ -136,7 +152,7 @@ public class mmeennuu extends AppCompatActivity implements NavigationView.OnNavi
         ArrayList<FeaturedHelpersClass> featuredLocations = new ArrayList<>();
 
         featuredLocations.add(new FeaturedHelpersClass(R.drawable.restaurant, "Restaurant", ""));
-        featuredLocations.add(new FeaturedHelpersClass(R.drawable.hotel, "Hotels", ""));
+        featuredLocations.add(new FeaturedHelpersClass(R.drawable.food, "Hotels", ""));
         featuredLocations.add(new FeaturedHelpersClass(R.drawable.shopping, "Shopping's", ""));
         featuredLocations.add(new FeaturedHelpersClass(R.drawable.cinema, "Cinema", ""));
 

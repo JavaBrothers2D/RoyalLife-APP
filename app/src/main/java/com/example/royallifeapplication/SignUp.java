@@ -24,6 +24,7 @@ public class SignUp extends AppCompatActivity {
     private Button btnsignup;
     private TextInputLayout fullname,email,username,pass,passagain;
     ImageView back;
+    String FullName,Email,UserName,PassW,RePass;
     DatabaseReference fAuth;
 
     private boolean isValidEmailId(String email){
@@ -51,73 +52,24 @@ public class SignUp extends AppCompatActivity {
         username = findViewById(R.id.edtAccount);
         pass = findViewById(R.id.edtPass);
         passagain = findViewById(R.id.edtConfirmPass);
-        btnsignup.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String FullName = fullname.getEditText().getText().toString().trim();
-                String Email = email.getEditText().getText().toString().trim();
-                String UserName = username.getEditText().getText().toString().trim();
-                String PassW = pass.getEditText().getText().toString().trim();
-                String RePass = passagain.getEditText().getText().toString().trim();
 
-                if(TextUtils.isEmpty(FullName)){
-                    fullname.setError("Firstname is Required");
-                    return;
-                }else fullname.setError(null);
+        btnsignup = findViewById(R.id.btnSignup);
+       btnsignup.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
 
-
-                if(TextUtils.isEmpty(UserName)){
-                    username.setError("Username is Required");
-                    return;
-                }else username.setError(null);
-
-                String regularExpression1 = "^[a-zA-Z0-9]*[\\s]{1}[a-zA-Z0-9]*[$%#@#]{1}[a-zA-Z0-9]*$";
-                String regularExpression2 = "^[a-zA-Z0-9]*[$%#@#]{1}[a-zA-Z0-9]*[\\s]{1}[a-zA-Z0-9]*$";
-                if (UserName.matches(regularExpression1) || UserName.matches(regularExpression2) ) {
-                    System.out.println("Valid");
-                } else {
-                    System.out.println("Invalid");
+                if(!valiadte() ){
+                    Toast.makeText(SignUp.this,"Faild",Toast.LENGTH_LONG).show();
                     return;
                 }
-                if(TextUtils.isEmpty(Email) || !isValidEmailId(email.getEditText().getText().toString().trim()) ){
-                    email.setError("Email is Required");
-                    email.requestFocus();
-                    return;
-
-                }else fullname.setError(null);
-
-                if(TextUtils.isEmpty(PassW)){
-                    pass.setError("Password is Required");
-                    return;
+                else if(!validatePass()){
+                    passagain.setError("Not matching pass and confirm pass");
+                }else
+                {
+                    create();
                 }
-
-                if(pass.getEditText().getText().length() < 8){
-                    pass.setError("Password must be >=8");
-                    return;
-                }else pass.setError(null);
-
-                if(TextUtils.isEmpty(RePass)){
-                    passagain.setError("Confirm Password is Required");
-                    return;
-                }
-
-                if(!PassW.equals(RePass)){
-                    passagain.setError("Password not matching ");
-                    passagain.requestFocus();
-                    return;
-                }else passagain.setError(null);
-
-                User user = new User(FullName,Email,PassW,UserName);
-
-                fAuth.child(UserName).setValue(user);
-
-                Toast.makeText(SignUp.this,"inserted",Toast.LENGTH_LONG).show();
-
-                Intent intent = new Intent(getApplication(),VerifyPhone.class);
-
-                startActivity(intent);
-            }
-        });
+           }
+       });
 
     back = findViewById(R.id.backto);
     back.setOnClickListener(new View.OnClickListener() {
@@ -127,5 +79,65 @@ public class SignUp extends AppCompatActivity {
             startActivity(intent);
         }
     });
+    }
+    public void create(){
+        User user = new User(FullName,Email,PassW,UserName);
+
+        fAuth.child(UserName).setValue(user);
+
+        Toast.makeText(SignUp.this,"inserted",Toast.LENGTH_LONG).show();
+
+        Intent intent = new Intent(getApplication(),VerifyPhone.class);
+
+        startActivity(intent);
+    }
+    public boolean validatePass(){
+        final String PassW = pass.getEditText().getText().toString().trim();
+        final String RePass = passagain.getEditText().getText().toString().trim();
+        if (PassW.equals(RePass)) {
+            return true;
+        } else {
+
+            return false;
+        }
+    }
+    public boolean valiadte(){
+        FullName = fullname.getEditText().getText().toString().trim();
+        Email = email.getEditText().getText().toString().trim();
+        UserName = username.getEditText().getText().toString().trim();
+        final String PassW = pass.getEditText().getText().toString().trim();
+        final String RePass = passagain.getEditText().getText().toString().trim();
+        String regularExpression1 = "^[a-zA-Z0-9]*[\\s]{1}[a-zA-Z0-9]*[$%#@#]{1}[a-zA-Z0-9]*$";
+        String regularExpression2 = "^[a-zA-Z0-9]*[$%#@#]{1}[a-zA-Z0-9]*[\\s]{1}[a-zA-Z0-9]*$";
+        if(TextUtils.isEmpty(FullName)){
+            fullname.setError("Fullname is Required");
+            return false;
+        }
+
+        if(TextUtils.isEmpty(UserName)){
+            username.setError("Username is Required");
+            return false;
+        }
+
+        if(TextUtils.isEmpty(Email) || !isValidEmailId(email.getEditText().getText().toString().trim()) ){
+            email.setError("Email is Required");
+            email.requestFocus();
+            return false;
+        }
+        if(TextUtils.isEmpty(PassW)){
+            pass.setError("Password is Required");
+            return false;
+        }
+
+        if(pass.getEditText().getText().length() < 8){
+            pass.setError("Password must be >=8");
+            return false;
+        }
+        if(TextUtils.isEmpty(RePass)){
+            passagain.setError("Confirm Password is Required");
+            return false;
+        }
+
+        return true;
     }
 }

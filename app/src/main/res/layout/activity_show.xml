@@ -1,50 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
-    android:layout_height="300dp"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardCornerRadius="8dp"
-    app:cardElevation="4dp"
+    app:cardCornerRadius="9dp"
+    app:cardElevation="6dp"
     android:layout_margin="10dp"
-    android:padding="15dp">
+    android:padding="15dp"
+    android:background="#fff">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="15dp">
+        android:padding="15dp"
+        android:background="#fff">
 
         <ImageView
             android:id="@+id/image_cgv"
-            android:layout_width="match_parent"
-            android:layout_height="140dp"
+            android:layout_width="160dp"
+            android:layout_height="170dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/cgv" />
+            android:src="@drawable/cgv"
+            />
 
         <TextView
             android:id="@+id/txt_cgv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:layout_marginBottom="-5dp"
             android:fontFamily="@font/baloo"
             android:text="CGV CINEMA"
             android:textColor="@color/black"
-            android:textSize="20sp" />
+            android:textSize="22sp"
+            android:layout_toRightOf="@+id/image_cgv"
+            android:layout_marginLeft="12dp"/>
 
         <RatingBar
+            android:id="@+id/rating"
             style="@style/Widget.AppCompat.RatingBar.Small"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:rating="3.5" />
+            android:rating="3.5"
+            android:layout_toRightOf="@+id/image_cgv"
+            android:layout_below="@+id/txt_cgv"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="0dp"/>
 
         <TextView
             android:id="@+id/txt_gioithieucgv"
             android:layout_width="wrap_content"
-            android:layout_height="85dp"
+            android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
-            android:text="CGV is one of the top 5 largest cinema clusters in the world and the largest distributor and cinema complex in Vietnam." />
+            android:text="CGV is one of the top 5 largest cinema clusters in the world and the largest distributor and cinema complex in Vietnam."
+            android:layout_below="@+id/rating"
+            android:layout_toRightOf="@+id/image_cgv"
+            android:layout_marginLeft="12dp"
+            android:textSize="16.5dp"
+            android:layout_marginTop="11dp"/>
 
 
-    </LinearLayout>
+    </RelativeLayout>
 </androidx.cardview.widget.CardView>
