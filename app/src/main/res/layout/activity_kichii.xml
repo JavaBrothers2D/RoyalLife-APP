@@ -209,7 +209,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:text="Email support: support.hn@ggg.com.vn"
+            android:text="Addr: Kichi-Kichi Vincom Lê Thánh Tôn - Tầng B3,Tòa nhà Vincom Center, 70-72 Lê Thánh Tôn, Phường Bến Nghé, Quận 1, TP. Hồ Chí Minh - 02873000205"
             android:textColor="@color/black"
             android:textSize="16sp"
             android:id="@+id/kichiAdd"/>

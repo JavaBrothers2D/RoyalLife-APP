@@ -209,7 +209,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:text="Email: zahrahrooftop.lounge@gmail.com"
+            android:text="Addr: 19 Đỗ Quang Đẩu, Phường Phạm Ngũ Lão, Quận 1, Thành phố Hồ Chí Minh"
             android:textColor="@color/black"
             android:textSize="16sp" />
 

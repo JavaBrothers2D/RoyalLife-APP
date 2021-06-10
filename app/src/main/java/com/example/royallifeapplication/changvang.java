@@ -19,6 +19,8 @@ public class changvang extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_changvangmore);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getSupportActionBar().hide();
         imgback = findViewById(R.id.backtoMenu3);
         bad1 = findViewById(R.id.changvang1);
         bad2 = findViewById(R.id.changvang2);

@@ -19,6 +19,8 @@ public class wine extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_winebarmore);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getSupportActionBar().hide();
         imgback = findViewById(R.id.backtoMenu6);
         bad1 = findViewById(R.id.winebar1);
         bad2 = findViewById(R.id.winebar2);

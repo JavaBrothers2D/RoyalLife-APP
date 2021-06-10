@@ -19,16 +19,18 @@ public class kichii extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kichii);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getSupportActionBar().hide();
         imgback = findViewById(R.id.backtoMenu8);
-        bad1 = findViewById(R.id.gogi1);
-        bad2 = findViewById(R.id.gogi2);
-        bad3 = findViewById(R.id.gogi3);
-        bad4 = findViewById(R.id.gogi4);
-        bad5 = findViewById(R.id.gogi5);
-        bad6 = findViewById(R.id.gogi6);
-        bad7 = findViewById(R.id.gogi7);
-        bad8 = findViewById(R.id.gogi8);
-        bad9 = findViewById(R.id.gogi9);
+        bad1 = findViewById(R.id.chiki1);
+        bad2 = findViewById(R.id.chiki2);
+        bad3 = findViewById(R.id.chiki3);
+        bad4 = findViewById(R.id.chiki4);
+        bad5 = findViewById(R.id.chiki5);
+        bad6 = findViewById(R.id.chiki6);
+        bad7 = findViewById(R.id.chiki7);
+        bad8 = findViewById(R.id.chiki8);
+        bad9 = findViewById(R.id.chiki9);
         add = findViewById(R.id.kichiAdd);
         add.setOnClickListener(new View.OnClickListener() {
             @Override

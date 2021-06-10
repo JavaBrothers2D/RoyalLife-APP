@@ -19,7 +19,8 @@ public class cgv extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cgvmore);
-
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getSupportActionBar().hide();
         imgback = findViewById(R.id.backtoMenu);
         bad1 = findViewById(R.id.cgv1);
         bad2 = findViewById(R.id.cgv2);

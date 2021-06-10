@@ -163,7 +163,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:text="Csteamdcs@gmail.com"
+            android:text="Addr: Quận 1 - Central Market Lê Lai, Phường Phạm Ngũ Lão."
             android:textColor="@color/black"
             android:textSize="16sp"
             android:id="@+id/dirtyAdd"/>

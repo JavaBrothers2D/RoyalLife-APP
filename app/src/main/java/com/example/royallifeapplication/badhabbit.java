@@ -21,7 +21,8 @@ public class badhabbit extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_badhabitmore);
-
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getSupportActionBar().hide();
         imgback = findViewById(R.id.backtoMenu4);
         bad1 = findViewById(R.id.bad1);
         bad2 = findViewById(R.id.bad2);

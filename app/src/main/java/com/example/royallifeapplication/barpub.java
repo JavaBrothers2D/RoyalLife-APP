@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
+import android.view.WindowManager;
 
 import com.example.royallifeapplication.HelperClass.HomeAdapter.FeaturedHelpersClass;
 import com.example.royallifeapplication.HelperClass.HomeAdapter.BarpubLocate;
@@ -25,6 +26,8 @@ public class barpub extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.showlist);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getSupportActionBar().hide();
         featuredRecycler = findViewById(R.id.featred_recyclerrr);
         featuredRecycler();
 

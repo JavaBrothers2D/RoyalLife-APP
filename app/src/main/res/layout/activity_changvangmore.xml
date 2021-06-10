@@ -209,7 +209,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:text="Email support: tranchinhquang@gmail.com"
+            android:text="Addr: Hẻm 72 Bạch Đằng, Phường 24, Bình Thạnh, Thành phố Hồ Chí Minh 700000"
             android:textColor="@color/black"
             android:textSize="16sp"
             android:id="@+id/changAdd"/>

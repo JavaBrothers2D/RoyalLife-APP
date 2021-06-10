@@ -19,6 +19,8 @@ public class rooftopzahrah extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_zahrahrooftop);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getSupportActionBar().hide();
         imgback = findViewById(R.id.backtoMenu5);
         bad1 = findViewById(R.id.zahrah1);
         bad2 = findViewById(R.id.zahrah2);

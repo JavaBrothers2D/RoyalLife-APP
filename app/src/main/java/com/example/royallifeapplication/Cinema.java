@@ -11,6 +11,7 @@ import android.content.Intent;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.WindowManager;
 
 import com.example.royallifeapplication.HelperClass.HomeAdapter.CinemaLocate;
 import com.example.royallifeapplication.HelperClass.HomeAdapter.FeaturedHelpersClass;
@@ -34,6 +35,8 @@ public class Cinema extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.showlist);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getSupportActionBar().hide();
         featuredRecycler = findViewById(R.id.featred_recyclerrr);
         featuredRecycler();
 
