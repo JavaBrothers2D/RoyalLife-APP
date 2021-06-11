@@ -69,6 +69,7 @@ public class VerifyPhone extends AppCompatActivity {
         });
 
         otpcode = findViewById(R.id.pinviewOTP);
+        otpcode.setText(null);
         //textview
         resend = findViewById(R.id.txtResend);
 
@@ -88,6 +89,7 @@ public class VerifyPhone extends AppCompatActivity {
                     verifyPhoneNumber(userPhoneNum);
                     Toast.makeText(VerifyPhone.this, userPhoneNum, Toast.LENGTH_SHORT).show();
                 }
+                otpcode.requestFocus();
             }
         });
 
@@ -121,7 +123,7 @@ public class VerifyPhone extends AppCompatActivity {
                 verrificationId = s;
                 token = forceResendingToken;
                 sendotp.setEnabled(false);
-                otpcode.requestFocus();
+
             }
 
             @Override
@@ -146,7 +148,6 @@ public class VerifyPhone extends AppCompatActivity {
             @Override
             public void onSuccess(AuthResult authResult) {
                 Toast.makeText(VerifyPhone.this, "Success", Toast.LENGTH_LONG).show();
-
                 startActivity(new Intent(getApplicationContext(), Login.class));
                 finish();
             }

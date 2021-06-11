@@ -6,7 +6,8 @@
     app:cardCornerRadius="8dp"
     app:cardElevation="4dp"
     android:layout_margin="10dp"
-    android:padding="15dp">
+    android:padding="15dp"
+    android:background="#FFF">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -43,6 +44,7 @@
             android:layout_width="wrap_content"
             android:layout_height="85dp"
             android:layout_marginBottom="15dp"
+            android:textColor="#828282"
             android:text="CGV is one of the top 5 largest cinema clusters in the world and the largest distributor and cinema complex in Vietnam." />
 
 

@@ -5,7 +5,8 @@
     android:layout_height="wrap_content"
     app:cardCornerRadius="8dp"
     app:cardElevation="8dp"
-    android:layout_margin="10dp">
+    android:layout_margin="10dp"
+    android:background="#fff">
 
     <RelativeLayout
         android:layout_width="300dp"
@@ -28,7 +29,8 @@
             android:fontFamily="@font/baloo"
             android:text="CGV CINEMA"
             android:textColor="@color/black"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:layout_marginTop="5dp"/>
 
         <RatingBar
             android:id="@+id/rantingbar"
@@ -48,6 +50,8 @@
             android:layout_below="@+id/rantingbar"
             android:layout_marginLeft="10dp"
             android:layout_toRightOf="@+id/image_cgv1"
+            android:textColor="#828282"
+            android:layout_marginTop="10dp"
             android:text="CGV is one of the top 5 largest cinema clusters in the world and the largest distributor and cinema complex in Vietnam."/>
 
     </RelativeLayout>

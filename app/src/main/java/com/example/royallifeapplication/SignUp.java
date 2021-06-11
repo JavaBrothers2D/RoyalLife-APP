@@ -81,6 +81,13 @@ public class SignUp extends AppCompatActivity {
     });
     }
     public void create(){
+        FullName = fullname.getEditText().getText().toString().trim();
+        Email = email.getEditText().getText().toString().trim();
+        UserName = username.getEditText().getText().toString().trim();
+        PassW = pass.getEditText().getText().toString().trim();
+         RePass = passagain.getEditText().getText().toString().trim();
+        String regularExpression1 = "^[a-zA-Z0-9]*[\\s]{1}[a-zA-Z0-9]*[$%#@#]{1}[a-zA-Z0-9]*$";
+        String regularExpression2 = "^[a-zA-Z0-9]*[$%#@#]{1}[a-zA-Z0-9]*[\\s]{1}[a-zA-Z0-9]*$";
         User user = new User(FullName,Email,PassW,UserName);
 
         fAuth.child(UserName).setValue(user);
@@ -92,8 +99,8 @@ public class SignUp extends AppCompatActivity {
         startActivity(intent);
     }
     public boolean validatePass(){
-        final String PassW = pass.getEditText().getText().toString().trim();
-        final String RePass = passagain.getEditText().getText().toString().trim();
+         String PassW = pass.getEditText().getText().toString().trim();
+         String RePass = passagain.getEditText().getText().toString().trim();
         if (PassW.equals(RePass)) {
             return true;
         } else {
@@ -105,8 +112,8 @@ public class SignUp extends AppCompatActivity {
         FullName = fullname.getEditText().getText().toString().trim();
         Email = email.getEditText().getText().toString().trim();
         UserName = username.getEditText().getText().toString().trim();
-        final String PassW = pass.getEditText().getText().toString().trim();
-        final String RePass = passagain.getEditText().getText().toString().trim();
+         PassW = pass.getEditText().getText().toString().trim();
+        RePass = passagain.getEditText().getText().toString().trim();
         String regularExpression1 = "^[a-zA-Z0-9]*[\\s]{1}[a-zA-Z0-9]*[$%#@#]{1}[a-zA-Z0-9]*$";
         String regularExpression2 = "^[a-zA-Z0-9]*[$%#@#]{1}[a-zA-Z0-9]*[\\s]{1}[a-zA-Z0-9]*$";
         if(TextUtils.isEmpty(FullName)){

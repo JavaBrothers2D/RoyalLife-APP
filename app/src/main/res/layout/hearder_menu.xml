@@ -23,7 +23,8 @@
         android:text="Everything your city holds is here!"
         android:layout_below="@+id/txt_image"
         android:layout_marginBottom="15dp"
-        android:textSize="16sp"/>
+        android:textSize="16sp"
+        android:textColor="#828282"/>
 
 
     <TextView

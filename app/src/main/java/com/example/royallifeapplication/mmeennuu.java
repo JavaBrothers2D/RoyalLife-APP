@@ -71,7 +71,9 @@ public class mmeennuu extends AppCompatActivity implements NavigationView.OnNavi
         navigationView.setNavigationItemSelectedListener(this);
         navigationView.getCheckedItem();
         barpub = findViewById(R.id.barpub);
+
         shopping = findViewById(R.id.shopping);
+
         cinema = findViewById(R.id.cinema);
         barpub.setOnClickListener(new View.OnClickListener() {
             @Override

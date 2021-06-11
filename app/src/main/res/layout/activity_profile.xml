@@ -43,7 +43,8 @@
                 android:includeFontPadding="false"
                 android:text="Nguyễn Đăng Tuấn Đan"
                 android:textSize="20dp"
-                android:layout_marginLeft="25dp"/>
+                android:layout_marginLeft="25dp"
+                android:textColor="#828282"/>
 
 
         </RelativeLayout>
@@ -78,7 +79,8 @@
                         android:fontFamily="@font/bungee"
                         android:includeFontPadding="false"
                         android:text="29/6/2021"
-                        android:textSize="20sp" />
+                        android:textSize="20sp"
+                        android:textColor="#828282"/>
 
                     <TextView
                         android:id="@+id/date_text"
@@ -89,7 +91,8 @@
                         android:layout_centerHorizontal="true"
                         android:includeFontPadding="false"
                         android:text="Expiration date"
-                        android:textSize="15sp" />
+                        android:textSize="15sp"
+                        android:textColor="#828282"/>
 
                 </RelativeLayout>
 
@@ -120,7 +123,8 @@
                         android:fontFamily="@font/bungee"
                         android:includeFontPadding="false"
                         android:text="23"
-                        android:textSize="20sp" />
+                        android:textSize="20sp"
+                        android:textColor="#828282"/>
 
                     <TextView
                         android:id="@+id/checkin_text"
@@ -131,7 +135,8 @@
                         android:layout_centerHorizontal="true"
                         android:includeFontPadding="false"
                         android:text="Check In"
-                        android:textSize="15sp" />
+                        android:textSize="15sp"
+                        android:textColor="#828282"/>
 
                 </RelativeLayout>
 
@@ -151,7 +156,8 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/edtProfileFullname"
                 android:layout_marginBottom="7dp"
-                android:hint="Fullname">
+                android:hint="Fullname"
+                android:textColorHint="#828282">
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -166,7 +172,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="7dp"
                 android:id="@+id/edtProfileEmail"
-                android:hint="Email">
+                android:hint="Email"
+                android:textColorHint="#828282">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -181,7 +188,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="7dp"
                 android:id="@+id/edtProfilePhone"
-                android:hint="Phone Number">
+                android:hint="Phone Number"
+                android:textColorHint="#828282">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -197,7 +205,8 @@
                 android:layout_marginBottom="7dp"
                 android:id="@+id/edtProfilePass"
                 app:passwordToggleEnabled="true"
-                android:hint="Password">
+                android:hint="Password"
+                android:textColorHint="#828282">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"

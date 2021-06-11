@@ -8,7 +8,7 @@
     <application
         android:allowBackup="true"
         android:icon="@drawable/brlogo"
-        android:label="Royal Life"
+        android:label="Royal App"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RoyalLifeApplication">

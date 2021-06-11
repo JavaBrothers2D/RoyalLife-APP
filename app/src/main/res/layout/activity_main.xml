@@ -36,7 +36,8 @@
         android:textAlignment="center"
         android:textSize="70dp"
         android:textStyle="italic"
-        android:transitionName="logo_text" />
+        android:transitionName="logo_text"
+        android:textColor="#828282"/>
 
     <TextView
         android:id="@+id/textView2"
@@ -46,7 +47,8 @@
         android:text="Apps that make life easier"
         android:textAlignment="center"
         android:textStyle="normal"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center_horizontal"
+        android:textColor="#828282"/>
 
 
 </LinearLayout>
