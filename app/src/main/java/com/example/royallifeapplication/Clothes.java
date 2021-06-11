@@ -1,34 +1,30 @@
 package com.example.royallifeapplication;
 
-import androidx.annotation.NonNull;
+
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.view.GravityCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
+
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
+
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
-import android.view.MenuItem;
+
+import android.view.View;
 import android.view.WindowManager;
+import android.widget.ImageView;
 
 import com.example.royallifeapplication.HelperClass.HomeAdapter.FeaturedHelpersClass;
-import com.example.royallifeapplication.HelperClass.HomeAdapter.BarpubLocate;
 import com.example.royallifeapplication.HelperClass.HomeAdapter.ShoppingLocate;
-import com.google.android.material.navigation.NavigationView;
-
-import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 
-public class shopping extends AppCompatActivity  {
+public class Clothes extends AppCompatActivity  {
 
     RecyclerView featuredRecycler;
     ShoppingLocate adapter2;
+    ImageView backback;
 
-    //Drawer Menu
-    DrawerLayout drawerLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +34,13 @@ public class shopping extends AppCompatActivity  {
         getSupportActionBar().hide();
         featuredRecycler = findViewById(R.id.featred_recyclerrr);
         featuredRecycler();
-
+        backback = findViewById(R.id.backback);
+        backback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
     }
     private void featuredRecycler() {
 

@@ -71,10 +71,9 @@ public class mmeennuu extends AppCompatActivity implements NavigationView.OnNavi
         navigationView.setNavigationItemSelectedListener(this);
         navigationView.getCheckedItem();
         barpub = findViewById(R.id.barpub);
+        cinema = findViewById(R.id.listcinema);
+        shopping = findViewById(R.id.shoppinglist);
 
-        shopping = findViewById(R.id.shopping);
-
-        cinema = findViewById(R.id.cinema);
         barpub.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -89,22 +88,27 @@ public class mmeennuu extends AppCompatActivity implements NavigationView.OnNavi
                 startActivity(intent);
             }
         });
-        shopping.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), shopping.class);
-                startActivity(intent);
-            }
-        });
         cinema.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Cinema.class);
-                startActivity(intent);
+                showcinema();
+            }
+        });
+        shopping.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showshopping();
             }
         });
     }
-
+    public void showcinema(){
+        Intent intent = new Intent(getApplicationContext(),Cinema.class);
+        startActivity(intent);
+    }
+    public void showshopping(){
+        Intent intent = new Intent(getApplicationContext(),Clothes.class);
+        startActivity(intent);
+    }
     private void featuredRecycler() {
 
         featuredRecycler.setHasFixedSize(true);

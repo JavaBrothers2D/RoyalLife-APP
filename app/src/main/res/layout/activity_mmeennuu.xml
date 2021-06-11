@@ -163,7 +163,7 @@
 
                             <ImageView
                                 android:layout_width="30dp"
-                                android:id="@+id/shopping"
+                                android:id="@+id/shoppinglist"
                                 android:layout_height="30dp"
                                 android:layout_centerInParent="true"
                                 android:background="@drawable/iconshopping" />
@@ -196,7 +196,7 @@
                             <ImageView
                                 android:layout_width="30dp"
                                 android:layout_height="30dp"
-                                android:id="@+id/cinema"
+                                android:id="@+id/listcinema"
                                 android:layout_centerInParent="true"
                                 android:background="@drawable/cinemaicon" />
 

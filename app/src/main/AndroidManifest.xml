@@ -16,7 +16,8 @@
         <activity android:name=".rooftopzahrah" />
         <activity android:name=".barpub" />
         <activity android:name=".show" />
-
+        <activity android:name=".Cinema" />
+        <activity android:name=".Clothes" />
         <activity android:name=".Foods" />
         <activity android:name=".wine" />
         <activity android:name=".skybar" />

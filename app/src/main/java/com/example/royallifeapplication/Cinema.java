@@ -11,7 +11,9 @@ import android.content.Intent;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.WindowManager;
+import android.widget.ImageView;
 
 import com.example.royallifeapplication.HelperClass.HomeAdapter.CinemaLocate;
 import com.example.royallifeapplication.HelperClass.HomeAdapter.FeaturedHelpersClass;
@@ -27,7 +29,7 @@ public class Cinema extends AppCompatActivity  {
 
     RecyclerView featuredRecycler;
     CinemaLocate adapter2;
-
+    ImageView backback;
     //Drawer Menu
     DrawerLayout drawerLayout;
 
@@ -39,7 +41,13 @@ public class Cinema extends AppCompatActivity  {
         getSupportActionBar().hide();
         featuredRecycler = findViewById(R.id.featred_recyclerrr);
         featuredRecycler();
-
+        backback = findViewById(R.id.backback);
+        backback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
     }
     private void featuredRecycler() {
 

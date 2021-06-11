@@ -69,7 +69,9 @@ public class VerifyPhone extends AppCompatActivity {
         });
 
         otpcode = findViewById(R.id.pinviewOTP);
-        otpcode.setText(null);
+        otpcode.bringToFront();
+        otpcode.getOnFocusChangeListener();
+        otpcode.setOnClickListener(View::bringToFront);
         //textview
         resend = findViewById(R.id.txtResend);
 
@@ -129,6 +131,7 @@ public class VerifyPhone extends AppCompatActivity {
             @Override
             public void onCodeAutoRetrievalTimeOut(@NonNull @NotNull String s) {
                 super.onCodeAutoRetrievalTimeOut(s);
+                sendotp.setEnabled(true);
             }
         };
     }
