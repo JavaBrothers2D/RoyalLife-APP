@@ -2,9 +2,13 @@ package com.example.royallifeapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.provider.MediaStore;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import com.google.zxing.BarcodeFormat;
@@ -15,19 +19,42 @@ import com.google.zxing.common.BitMatrix;
 
 public class QrCode extends AppCompatActivity {
 
+    private Button btnCreate, btnCamera;
+    private ImageView imv;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_qr_code);
-        ImageView imv = findViewById(R.id.imgQR);
-        try{
-            Bitmap bitmap = encodeAsBitmap("Khong co gi o day ca");
-            imv.setImageBitmap(bitmap);
-        }
-        catch(WriterException e){
-            e.printStackTrace();
-        }
+        binding();
+        btnCreate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                btnCreate.setVisibility(View.INVISIBLE);
+                try{
+                    Bitmap bitmap = encodeAsBitmap("Khong co gi o day ca");
+                    imv.setImageBitmap(bitmap);
+                }
+                catch(WriterException e){
+                    e.printStackTrace();
+                }
+            }
+        });
+        btnCamera.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent Intent3 = new Intent(MediaStore.INTENT_ACTION_STILL_IMAGE_CAMERA);
+                startActivity(Intent3);
+            }
+        });
     }
+
+    private void binding() {
+        imv = findViewById(R.id.imgQR);
+        btnCreate = findViewById(R.id.btnCreateQR);
+        btnCamera = findViewById(R.id.btnOpenCamera);
+
+    }
+
     Bitmap encodeAsBitmap(String str) throws WriterException {
         BitMatrix result;
         try{
