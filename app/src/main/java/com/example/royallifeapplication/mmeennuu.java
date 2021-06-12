@@ -197,6 +197,7 @@ public class mmeennuu extends AppCompatActivity implements NavigationView.OnNavi
 // except for the ones that make the content appear under the system bars.
     private void showSystemUI() {
         View decorView = getWindow().getDecorView();
+
         decorView.setSystemUiVisibility(
                 View.SYSTEM_UI_FLAG_LAYOUT_STABLE
                         | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
@@ -218,6 +219,9 @@ public class mmeennuu extends AppCompatActivity implements NavigationView.OnNavi
                 Intent intent = new Intent(mmeennuu.this,Payment.class);
                 startActivity(intent);
                 break;
+            case R.id.QrMenu:
+                Intent intent1 = new Intent(mmeennuu.this,QrCode.class);
+                startActivity(intent1);
         }
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
