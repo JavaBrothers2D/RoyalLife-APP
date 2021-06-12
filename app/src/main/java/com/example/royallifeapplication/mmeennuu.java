@@ -214,6 +214,9 @@ public class mmeennuu extends AppCompatActivity implements NavigationView.OnNavi
                 Intent intentt = new Intent(mmeennuu.this,Login.class);
                 intentt.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK| Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intentt);
+            case R.id.WalletMenu:
+                Intent intent = new Intent(mmeennuu.this,Payment.class);
+                startActivity(intent);
                 break;
         }
         drawerLayout.closeDrawer(GravityCompat.START);

@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RoyalLifeApplication">
-        <activity android:name=".kichii"></activity>
+        <activity android:name=".Payment"></activity>
+        <activity android:name=".kichii" />
         <activity android:name=".rooftopzahrah" />
         <activity android:name=".barpub" />
         <activity android:name=".show" />
