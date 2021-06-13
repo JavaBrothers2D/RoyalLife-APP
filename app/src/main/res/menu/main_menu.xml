@@ -17,9 +17,9 @@
         android:title="WALLET" />
 
         <item
-        android:id="@+id/MapMenu"
+        android:id="@+id/Times"
         android:icon="@drawable/map_menu"
-        android:title="MAP" />
+        android:title="Remaining Times" />
 
         <item
         android:id="@+id/SignoutMenu"

@@ -232,7 +232,19 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:rating="4" />
-
+        <Button
+            android:id="@+id/btnTicketBadhabbit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/cuttombuttonverify"
+            android:fontFamily="@font/baloo"
+            android:text="Use Tickets"
+            android:textStyle="normal"
+            app:backgroundTint="#1cb4a6"
+            android:textColor="#fff"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="center" />
 
     </LinearLayout>
 

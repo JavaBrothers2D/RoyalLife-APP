@@ -40,6 +40,7 @@ public class rooftopzahrah extends AppCompatActivity {
                         Uri.parse(getString(R.string.defaultSearchString)+ "Zahrah rooftop" +"/@"
                                 + method.getLatitude() + "," + method.getLongitude() + ","+"10z/data=!3m1!4b1"));
                 startActivity(intent);
+
             }
         });
         //backmenu

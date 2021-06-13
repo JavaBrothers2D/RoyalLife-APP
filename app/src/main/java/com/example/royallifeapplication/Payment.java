@@ -3,6 +3,7 @@ package com.example.royallifeapplication;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -17,7 +18,6 @@ import org.json.JSONObject;
 public class Payment extends AppCompatActivity implements PaymentResultListener {
 
     Button btnpay;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,7 +25,7 @@ public class Payment extends AppCompatActivity implements PaymentResultListener 
 
         btnpay = findViewById(R.id.btnPay);
 
-        String SAmout = "99";
+        String SAmout = "199";
 
         final int amout = Math.round(Float.parseFloat(SAmout) * 100);
 
@@ -50,19 +50,20 @@ public class Payment extends AppCompatActivity implements PaymentResultListener 
                 }catch (JSONException e){
                     e.printStackTrace();
                 }
-
-
             }
         });
 
     }
-
     @Override
     public void onPaymentSuccess(String s) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Payment ID");
         builder.setMessage(s);
         builder.show();
+        int ticket = 3 ;
+        Intent myIntent = new Intent(Payment.this, mmeennuu.class);
+        myIntent.putExtra("intVariableName", ticket);
+        startActivity(myIntent);
     }
 
     @Override

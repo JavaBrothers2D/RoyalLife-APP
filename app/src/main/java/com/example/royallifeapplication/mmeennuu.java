@@ -9,6 +9,8 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -43,6 +45,9 @@ public class mmeennuu extends AppCompatActivity implements NavigationView.OnNavi
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     FirebaseAuth fAuth;
+    int count =3;
+    String dem1 = "3";
+    TextView countt;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,6 +55,7 @@ public class mmeennuu extends AppCompatActivity implements NavigationView.OnNavi
         //getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         res = findViewById(R.id.restaur);
         search = findViewById(R.id.edtSearch);
+        countt = findViewById(R.id.count);
         featuredRecycler = findViewById(R.id.featred_recycler);
         featuredRecycler();
         viewedCard = findViewById(R.id.featred_recycler1);
@@ -222,6 +228,10 @@ public class mmeennuu extends AppCompatActivity implements NavigationView.OnNavi
             case R.id.QrMenu:
                 Intent intent1 = new Intent(mmeennuu.this,QrCode.class);
                 startActivity(intent1);
+                break;
+            case R.id.Times:
+
+
         }
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
