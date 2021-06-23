@@ -217,13 +217,13 @@
             android:textSize="16sp" />
 
         <TextView
+            android:id="@+id/badAddr"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:text="Addr: 117 Trần Đình Xu, phường Nguyễn Cư Trinh, Quận 1"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            android:id="@+id/badAddr"/>
+            android:textColor="@color/light_blue_A400"
+            android:textSize="16sp" />
 
         <RatingBar
             style="@style/Widget.AppCompat.RatingBar.Small"

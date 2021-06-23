@@ -187,7 +187,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:text="Addr: Quận 1 - Central Market Lê Lai, Phường Phạm Ngũ Lão."
-            android:textColor="@color/black"
+            android:textColor="@color/light_blue_A400"
             android:textSize="16sp"
             android:id="@+id/gogiAdd"/>
 
