@@ -62,9 +62,7 @@ public class SignUp extends AppCompatActivity {
                     Toast.makeText(SignUp.this,"Faild",Toast.LENGTH_LONG).show();
                     return;
                 }
-                else if(!validatePass()){
-                    passagain.setError("Not matching pass and confirm pass");
-                }else
+                else
                 {
                     create();
                 }
@@ -88,7 +86,7 @@ public class SignUp extends AppCompatActivity {
          RePass = passagain.getEditText().getText().toString().trim();
         String regularExpression1 = "^[a-zA-Z0-9]*[\\s]{1}[a-zA-Z0-9]*[$%#@#]{1}[a-zA-Z0-9]*$";
         String regularExpression2 = "^[a-zA-Z0-9]*[$%#@#]{1}[a-zA-Z0-9]*[\\s]{1}[a-zA-Z0-9]*$";
-        User user = new User(FullName,Email,PassW,UserName);
+        User user = new User(FullName,Email,PassW,RePass,UserName);
 
         fAuth.child(UserName).setValue(user);
 

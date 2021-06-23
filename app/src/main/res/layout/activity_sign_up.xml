@@ -145,8 +145,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Confirm Password"
-            app:passwordToggleEnabled="true"
+            android:hint="Your PhoneNumber"
             app:boxStrokeColor="#000000"
             app:endIconTint="#000000"
             app:hintTextColor="#000000"
@@ -158,7 +157,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPassword"/>
+                android:inputType="number"/>
         </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
 
