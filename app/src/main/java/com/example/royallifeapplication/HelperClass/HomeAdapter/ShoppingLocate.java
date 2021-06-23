@@ -11,6 +11,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.royallifeapplication.badhabbit;
+import com.example.royallifeapplication.dirty;
 import com.example.royallifeapplication.rooftopzahrah;
 import com.example.royallifeapplication.changvang;
 import com.example.royallifeapplication.heli;
@@ -78,27 +80,12 @@ public class ShoppingLocate extends RecyclerView.Adapter<ShoppingLocate.Featured
                     switch (getAdapterPosition()){
                         case 0:
                             Toast.makeText(v.getContext()," "+item.getTitle(),Toast.LENGTH_SHORT).show();
-                            intent =  new Intent(v.getContext(), heli.class);
+                            intent =  new Intent(v.getContext(), badhabbit.class);
                             v.getContext().startActivity(intent);
                             break;
                         case 1:
                             Toast.makeText(v.getContext()," "+item.getTitle(),Toast.LENGTH_SHORT).show();
-                            intent =  new Intent(v.getContext(), changvang.class);
-                            v.getContext().startActivity(intent);
-                            break;
-                        case 2:
-                            Toast.makeText(v.getContext()," "+item.getTitle(),Toast.LENGTH_SHORT).show();
-                            intent =  new Intent(v.getContext(), skybar.class);
-                            v.getContext().startActivity(intent);
-                            break;
-                        case 3:
-                            Toast.makeText(v.getContext()," "+item.getTitle(),Toast.LENGTH_SHORT).show();
-                            intent =  new Intent(v.getContext(), wine.class);
-                            v.getContext().startActivity(intent);
-                            break;
-                        case 4:
-                            Toast.makeText(v.getContext(),"The Item Clicked is: "+item.getTitle(),Toast.LENGTH_SHORT).show();
-                            intent =  new Intent(v.getContext(), rooftopzahrah.class);
+                            intent =  new Intent(v.getContext(), dirty.class);
                             v.getContext().startActivity(intent);
                             break;
                         default:
