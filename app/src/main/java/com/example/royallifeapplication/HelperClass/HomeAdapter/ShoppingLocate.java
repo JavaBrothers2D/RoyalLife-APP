@@ -13,12 +13,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.royallifeapplication.badhabbit;
 import com.example.royallifeapplication.dirty;
-import com.example.royallifeapplication.rooftopzahrah;
-import com.example.royallifeapplication.changvang;
-import com.example.royallifeapplication.heli;
+
 import com.example.royallifeapplication.R;
-import com.example.royallifeapplication.skybar;
-import com.example.royallifeapplication.wine;
+
 
 import org.jetbrains.annotations.NotNull;
 
